@@ -1,0 +1,166 @@
+@import 'bootstrap/dist/css/bootstrap.min.css';
+
+:root {
+  --primary-color: #0d6efd;
+  --secondary-color: #6c757d;
+  --bg-light: #e6f0ff;
+  --bg-dark: #212529;
+  --text-light: #212529;
+  --text-dark: #f8f9fa;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+body.light-mode {
+  background-color: var(--bg-light);
+  color: var(--text-light);
+}
+
+body.dark-mode {
+  background-color: var(--bg-dark);
+  color: var(--text-dark);
+}
+
+/* Adaptive Theme Components */
+.theme-card {
+  background-color: #ffffff;
+  color: var(--text-light);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s, color 0.3s;
+}
+
+body.dark-mode .theme-card {
+  background-color: #2b3035;
+  color: var(--text-dark);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.theme-form {
+  background-color: #ffffff;
+  color: var(--text-light);
+  transition: background-color 0.3s, color 0.3s;
+}
+
+body.dark-mode .theme-form {
+  background-color: #2b3035;
+  color: var(--text-dark);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+body.dark-mode .form-control {
+  background-color: #212529;
+  border-color: #495057;
+  color: #fff;
+}
+
+body.dark-mode .form-control:focus {
+  background-color: #212529;
+  color: #fff;
+}
+
+/* Card Animations */
+.card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: none;
+  overflow: hidden;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Button Animations */
+.btn {
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  border-radius: 50px;
+  /* Rounded pill shape for modern look */
+  padding: 0.5rem 1.5rem;
+}
+
+.btn:hover {
+  transform: translateY(-3px);
+}
+
+.btn:active {
+  transform: translateY(-1px);
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, #0d6efd 0%, #00d4ff 100%);
+  border: none;
+  color: white;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  box-shadow: 0 4px 15px rgba(13, 110, 253, 0.3);
+}
+
+.btn-primary:hover {
+  background: linear-gradient(135deg, #0b5ed7 0%, #00b0d4 100%);
+  box-shadow: 0 6px 20px rgba(13, 110, 253, 0.6);
+  color: white;
+}
+
+.btn-outline-primary {
+  color: #00d4ff;
+  border: 2px solid #00d4ff;
+  background: transparent;
+  font-weight: 600;
+  box-shadow: 0 4px 15px rgba(0, 212, 255, 0.1);
+}
+
+.btn-outline-primary:hover {
+  background: #00d4ff;
+  color: #212529;
+  box-shadow: 0 6px 20px rgba(0, 212, 255, 0.4);
+  border-color: #00d4ff;
+}
+
+.section-title {
+  position: relative;
+  display: inline-block;
+  margin-bottom: 2rem;
+}
+
+.section-title::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  width: 50px;
+  height: 3px;
+  background-color: var(--primary-color);
+  transition: width 0.3s ease;
+}
+
+.section-title:hover::after {
+  width: 100%;
+}
+
+.navbar-brand {
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.hero-section {
+  padding: 100px 0;
+}
+
+.profile-photo {
+  width: 250px;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 5px solid var(--primary-color);
+  transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.profile-photo:hover {
+  transform: scale(1.05);
+  border-color: var(--secondary-color);
+}
